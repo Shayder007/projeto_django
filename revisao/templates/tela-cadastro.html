@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Cadastro</title>
+    <link rel="stylesheet" href="{% static 'css/style-cadastro.css' %}">
+    <!-- linkando com uma api de icones -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.7.2/css/all.css">
+    <script src="{% static 'js/script.js' %}"></script>
+</head>
+<body>
+    <nav>
+        <div class="nav-bar">
+            <div><img src="{% static 'images/books.png' %}" class="logo-img"></div>
+            <div class="div-logo"><a href="#" class="logo-nav">BiblioWeb</a></div>
+            <div class="div-items">
+                <a href="{% url 'menu' %}" class="link-nav">Home</a>
+                <a href="#" class="link-nav">About</a>
+                <a href="#" class="link-nav">Contact us</a>
+            </div>
+        </div>
+    </nav>
+
+    <h1><i class="fa-solid fa-book-open-reader"></i> Cadastro de Livros</h1>
+
+    <div class="container">
+        <form class="form">
+            <h2>Tela de Cadastros</h2>
+
+            <div class="form-group">
+                <label for="titulo"><i class="fa-solid fa-book"></i> Título do Livro</label>
+                <input type="text" name="titulo">
+            </div>
+
+            <div class="form-group">
+                <label for="isbn"><i class="fa-solid fa-key"></i> ISBN</label>
+                <input type="text" name="isbn">
+            </div>
+
+            <div class="form-group">
+                <label for="autor"><i class="fa-solid fa-user"></i> Autor(s)</label>
+                <input type="text" name="autor">
+            </div>
+
+            <div class="form-group">
+                <label for="ano"><i class="fa-solid fa-calendar"></i> Ano de Publicação</label>
+                <input type="text"name="ano">
+            </div>
+
+            <div class="form-group">
+                <label for="editora"><i class="fa-regular fa-newspaper"></i> Editora</label>
+                <input type="text" name="editora">
+            </div>
+
+            <div class="form-group">
+                <button onclick="cadastrar()"type="submit">Cadastrar</button>
+            </div>
+            
+            <div class="icones">
+                <a href="https://www.exemplo.com"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.exemplo.com"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.exemplo.com"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+
+        </form>
+  
+    </div>
+    
+    <footer>
+            <!-- links -->
+            <a href="https://www.exemplo.com">Saber mais/</a>
+            <a href="https://www.exemplo.com">Termos e condicoes/</a>
+            <!-- icones clicaveis -->
+           
+    </footer>
+
+</body>
+</html>
